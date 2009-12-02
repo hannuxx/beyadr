@@ -1,0 +1,16 @@
+Beyadr Operating System
+
+Please read LICENSE.txt for licensing information. The whole 
+Beyadr software package is under GPL v2 license.
+
+To make a kernel:
+ make elf
+
+ To test it:
+  make qemu
+
+Needed packages:
+ nasm (debian/ubuntu: sudo apt-get install nasm)
+ qemu (debian/ubuntu: sudo apt-get install qemu)
+ gcc (debian/ubuntu sudo apt-get install gcc)
+
