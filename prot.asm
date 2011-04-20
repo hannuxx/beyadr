@@ -1,6 +1,6 @@
-; ZPROT.ASM
+; Beyadr - prot.asm
 ; COMPILED WITH NASM 0.98 FOR WIN98 & LINUX
-; Copyright (c) Hannu M. Heikkinen
+; Copyright (c) 1999-2011 Hannu M. Heikkinen
 ; hannuxx@iki.fi
 ; All rights reserved.
 
@@ -127,7 +127,7 @@ do_idt2:
 
         sti
 
-        mov esi, Zendriq_msg
+        mov esi, Beyadr_msg
         call print_string
 
         mov esi, Reg_info
@@ -596,7 +596,7 @@ _SP    db 0,0,21,0, 0x1f, "ESP=0x",0
 _CS    db 0,0,22,0, 0x1f, "CS=0x",0
 _IP    db 0,0,23,0, 0x1f, "IP=0x",0
 
-Zendriq_msg    db 0,0,0,0,0x1f,"Zendriq Operating System 0.0.1",0
+Beyadr_msg    db 0,0,0,0,0x1f,"Beyadr Operating System 0.0.1",0
 zprot_main     db 0,0,7,0,0x1f,"Hello from ZMAIN.C!",0
 zprot_after   db 0,0,8,0,0x1f,"...after ZMAIN.C...",0
 

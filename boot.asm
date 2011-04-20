@@ -1,5 +1,5 @@
 ; ZBOOT.ASM
-; ZENDRIQ OPERATING SYSTEM BOOT CODE
+; Beyadr OPERATING SYSTEM BOOT CODE
 ; 1998-2008: COMPILED WITH NASM 0.98 FOR WIN98 & LINUX
 ; 2009->   : COMPILED WITH NASM 0.98 FOR WIN98 & LINUX
 ; Copyright 1999-2009 (c) Hannu M. Heikkinen
@@ -221,7 +221,7 @@ spin:  jmp spin
 ; =========================================
 ; Data
 ; =========================================
-LoadLine db "Booting process...loading the Zendriq loader...",13,10
+LoadLine db "Booting process...loading the Beyadr loader...",13,10
 	 db 0
 JumpInfo db "Jumping into the loader in 0x7E00...",13,10
 	 db 0
@@ -659,7 +659,7 @@ idt_end:
 ; Data
 LastKey  db 0x0
 
-InfoLine db "Welcome, The Zendriq Operating System 0.01...",13,10
+InfoLine db "Welcome, The Beyadr Operating System 0.01...",13,10
 	 db 0
 FirstRead db "Read sectors 2-12",13,10
 	 db 0
@@ -669,7 +669,7 @@ SetINT   db "Setting interrupts...",13,10
 	 db 0
 SetINT2  db "Interrupts DONE...",13,10
 	 db 0
-GoingPM db "Press ESC to enter the Zendriq kernel...",13,10
+GoingPM db "Press ESC to enter the Beyadr kernel...",13,10
 	 db 0
 GoingPM2 db "Into protected mode, no turning back...",13,10
 	 db 0
