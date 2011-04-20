@@ -10,7 +10,7 @@
 
         org 0x7c00
         section .text
-        jmp zendriq_entry
+        jmp beyadr_entry
 
 ; =========================================
 ; Print numeric values like registers etc.
@@ -139,7 +139,7 @@ kill_floppy:
 ; ===========================================================
 ; Set the system running...
 ; ===========================================================
-zendriq_entry:
+beyadr_entry:
         mov ax, 0
         mov ds, ax
         mov es, ax
@@ -469,7 +469,7 @@ kbd_spin_pm:
         mov esp, 0x8000
         sti
 
-        ; Jump into zendriq_prot.asm start
+        ; Jump into beyadr_prot.asm start
         jmp code_selector:0x8C00
 
 error_spin:
