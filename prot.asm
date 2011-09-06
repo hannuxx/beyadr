@@ -59,9 +59,9 @@ _start:
         call _clear_screen
 	call print_registers
 
-	jmp code_selector:start32_inits
+	;jmp code_selector:start32_inits
 
-	;jmp code_selector:spin4
+	jmp code_selector:spin4
 	
 spin4:
 

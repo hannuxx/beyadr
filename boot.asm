@@ -1,7 +1,7 @@
-; ZBOOT.ASM
+; BOOT.ASM
 ; Beyadr OPERATING SYSTEM BOOT CODE
 ; 1998-2008: COMPILED WITH NASM 0.98 FOR WIN98 & LINUX
-; 2009->   : COMPILED WITH NASM 0.98 FOR WIN98 & LINUX
+; 2009-2011: COMPILED WITH NASM 0.98 FOR LINUX & WIN7, USE QEMU
 ; Copyright 1999-2009 (c) Hannu M. Heikkinen
 ; hannuxx@iki.fi
 ; All rights reserved.
@@ -238,12 +238,12 @@ NoWay db "#Error#"
 ; Boot signature
 DW 0xAA55
 
-; ============================================================
-;            Z E N D R I Q       L   O   A   D   E   R
-; Copyright 1999-2009 (c) Hannu M. Heikkinen
+; ===========================================
+;            BEYADR LOADER
+; Copyright 1999-2011 (c) Hannu M. Heikkinen
 ; hannuxx@iki.fi
 ; All rights reserved.
-; ============================================================
+; ===========================================
        times 0x200-($-$$) db 0
 
 enable_a20:
@@ -670,8 +670,6 @@ SetINT   db "Setting interrupts...",13,10
 SetINT2  db "Interrupts DONE...",13,10
 	 db 0
 GoingPM db "Press ESC to enter the Beyadr kernel...",13,10
-	 db 0
-GoingPM2 db "Into protected mode, no turning back...",13,10
 	 db 0
 LF     db 13,10,0
 _AX    db " AX=0x",0
